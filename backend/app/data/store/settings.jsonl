@@ -1,0 +1,5 @@
+{"key": "system_version", "value": "1.0.0", "description": "Configuration schema version"}
+{"key": "currency", "value": "USD", "description": "Pricing currency"}
+{"key": "price_precision", "value": "2", "description": "Decimal places for pricing"}
+{"key": "require_all_categories", "value": "true", "description": "Whether all configuration categories are required for a valid quote"}
+{"key": "default_availability", "value": "true", "description": "Default availability for new options"}

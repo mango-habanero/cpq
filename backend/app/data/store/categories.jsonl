@@ -1,0 +1,5 @@
+{"id": "cpu_architecture", "name": "CPU Architecture", "description": "Server processor architecture", "required": true, "order": 1}
+{"id": "cpu_cores", "name": "CPU Cores", "description": "Number of processor cores", "required": true, "order": 2}
+{"id": "ram", "name": "RAM", "description": "System memory capacity", "required": true, "order": 3}
+{"id": "storage", "name": "Storage", "description": "Primary storage configuration", "required": true, "order": 4}
+{"id": "os", "name": "Operating System", "description": "Server operating system", "required": true, "order": 5}

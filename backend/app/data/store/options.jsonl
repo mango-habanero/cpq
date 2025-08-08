@@ -1,0 +1,15 @@
+{"id": "amd_ryzen_9", "category_id": "cpu_architecture", "display_name": "AMD Ryzen 9", "price": "0.00", "available": true, "order": 1}
+{"id": "arm64", "category_id": "cpu_architecture", "display_name": "ARM64", "price": "0.00", "available": true, "order": 2}
+{"id": "intel_xeon_silver", "category_id": "cpu_architecture", "display_name": "Intel Xeon Silver", "price": "49.00", "available": true, "order": 3}
+{"id": "cores_4", "category_id": "cpu_cores", "display_name": "4", "price": "0.00", "available": true, "order": 1}
+{"id": "cores_8", "category_id": "cpu_cores", "display_name": "8", "price": "80.00", "available": true, "order": 2}
+{"id": "cores_16", "category_id": "cpu_cores", "display_name": "16", "price": "160.00", "available": true, "order": 3}
+{"id": "ram_16gb", "category_id": "ram", "display_name": "16GB", "price": "0.00", "available": true, "order": 1}
+{"id": "ram_32gb", "category_id": "ram", "display_name": "32GB", "price": "29.00", "available": true, "order": 2}
+{"id": "ram_64gb", "category_id": "ram", "display_name": "64GB", "price": "99.00", "available": true, "order": 3}
+{"id": "nvme_480gb", "category_id": "storage", "display_name": "480GB NVMe", "price": "0.00", "available": true, "order": 1}
+{"id": "ssd_1tb", "category_id": "storage", "display_name": "1TB SSD", "price": "20.00", "available": true, "order": 2}
+{"id": "hdd_2tb", "category_id": "storage", "display_name": "2TB HDD", "price": "15.00", "available": true, "order": 3}
+{"id": "ubuntu", "category_id": "os", "display_name": "Ubuntu", "price": "0.00", "available": true, "order": 1}
+{"id": "windows_11", "category_id": "os", "display_name": "Windows 11", "price": "29.00", "available": true, "order": 2}
+{"id": "windows_server_2022", "category_id": "os", "display_name": "Windows Server 2022", "price": "99.00", "available": true, "order": 3}
