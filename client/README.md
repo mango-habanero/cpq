@@ -69,17 +69,3 @@ src/
 ├── shared/               # Reusable components
 └── styles/               # Global styles and theme
 ```
-
-## Tech Stack
-
-- **React 19** + **TypeScript** - Component framework with type safety
-- **Material-UI 7** - UI component library and design system
-- **Redux Toolkit** - State management with RTK Query for API calls
-- **Vite 7** - Build tool and development server
-- **ESLint + Prettier** - Code quality and formatting
-
-## API Endpoints Used
-
-- `GET /api/v1/servers/options` - Fetch available configuration options
-- `GET /api/v1/servers/configure` - Get pricing for current configuration
-- `POST /api/v1/quotes/requests` - Submit quote request with contact details
