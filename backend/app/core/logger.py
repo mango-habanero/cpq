@@ -5,8 +5,6 @@ from typing import Optional
 import structlog
 from structlog.types import Processor
 
-from .settings import Settings
-
 
 def _get_shared_processors() -> list[Processor]:
     """Get processors shared between sync and async configurations."""
@@ -26,13 +24,6 @@ def configure_logging(
         enable_json_logging: Optional[bool] = None,
         log_level: Optional[str] = None
 ) -> None:
-    try:
-        settings = Settings()
-        log_json = settings.log_json_format if enable_json_logging is None else enable_json_logging
-        level = settings.log_level if log_level is None else log_level
-    except ImportError:
-        log_json = enable_json_logging or False
-        level = log_level or "INFO"
 
     logging.basicConfig(level=logging.NOTSET)
     for handler in logging.root.handlers[:]:
@@ -53,7 +44,7 @@ def configure_logging(
 
     renderer = (
         structlog.processors.JSONRenderer()
-        if log_json
+        if enable_json_logging
         else structlog.dev.ConsoleRenderer(colors=True)
     )
 
@@ -68,11 +59,11 @@ def configure_logging(
 
     handler = logging.StreamHandler()
     handler.setFormatter(formatter)
-    handler.setLevel(level.upper())
+    handler.setLevel(log_level.upper())
 
     root_logger = logging.getLogger()
     root_logger.addHandler(handler)
-    root_logger.setLevel(level.upper())
+    root_logger.setLevel(log_level.upper())
 
     for logger_name in ["uvicorn", "granian", "_granian", "uvloop", "h11", "httpcore", "httpx"]:
         logger = logging.getLogger(logger_name)
@@ -94,8 +85,8 @@ def configure_logging(
 
     structlog.get_logger("system").info(
         "Logging configured",
-        json_format=log_json,
-        level=level
+        json_format=enable_json_logging,
+        level=log_level.upper()
     )
 
 app_logger = structlog.get_logger("system")
