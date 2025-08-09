@@ -63,33 +63,33 @@ A high-performance Configure, Price, Quote (CPQ) system built with Python for se
 
 ```
 backend/
-├── app/                          # Main application package
-│   ├── api/                      # API layer
+├── app/                         # Main application package
+│   ├── api/                     # API layer
 │   │   ├── routes/              # API route definitions
-│   │   └── dependencies.py      # Dependency injection
-│   ├── core/                     # Core application components
+│   │   ├──dependencies.py       # Dependency injection
+│   │   └── health.py            # Health check endpoints
+│   ├── core/                    # Core application components
 │   │   ├── app.py               # Application factory
 │   │   ├── settings.py          # Configuration management
 │   │   ├── logger.py            # Structured logging setup
 │   │   └── exceptions/          # Custom exception handling
-│   ├── data/                     # Data layer
+│   ├── data/                    # Data layer
 │   │   ├── models/              # Data models and schemas
 │   │   ├── store/               # Data persistence layer
 │   │   ├── provider.py          # Data access abstraction
 │   │   ├── enums.py             # Constants and enumerations
 │   │   └── utilities.py         # Helper functions
-│   ├── rules/                    # Rules engine
+│   ├── rules/                   # Rules engine
 │   │   ├── engine.py            # Core rules processing
 │   │   ├── condition_evaluator.py # Rule condition evaluation
 │   │   └── handlers/            # Rule type handlers
-│   ├── services/                 # Business logic services
+│   ├── services/                # Business logic services
 │   │   ├── quote.py             # Quote management
 │   │   └── server.py            # Server configuration
-│   ├── middleware/               # Request/response middleware
-│   ├── main.py                  # Application entry point
-│   └── health.py                # Health check endpoints
-├── tests/                        # Test suite
-├── scripts/                      # Utility scripts
+│   ├── middleware/              # Request/response middleware
+│   └── main.py                  # Application entry point
+├── tests/                       # Test suite
+├── scripts/                     # Utility scripts
 ├── .env.example                 # Environment template
 ├── pyproject.toml               # Project configuration
 └── uv.lock                      # Dependency lock file
